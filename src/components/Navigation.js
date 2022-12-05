@@ -10,10 +10,6 @@ const Logo = styled.p`
 `;
 
 const Nav = styled.nav`
-  ${
-    "" /* max-width: 1110px;
-  margin: 39px auto 0 auto; */
-  }
   display: flex;
   justify-content: space-between;
   margin: 29px 0 127px 0;
@@ -22,11 +18,16 @@ const Nav = styled.nav`
   grid-row: 1;
   z-index: 1;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
+  }
+
+  @media only screen and (max-width: 640px) {
+    align-items: center;
     flex-direction: column;
-    justify-content: space-between;
     margin-top: 20px;
     row-gap: 30px;
+    grid-row: 1/2;
+    grid-column: 1;
   }
 `;
 
@@ -35,6 +36,11 @@ const NavLinks = styled.ul`
   column-gap: 32px;
   align-items: center;
   margin-right: 29px;
+
+  @media only screen and (max-width: 640px) {
+    margin-right: 0;
+    column-gap: 25px;
+  }
 `;
 
 const NavLinkItem = styled.li``;
@@ -57,6 +63,22 @@ const Navigation = () => {
             <StaticImage
               alt="github cat logo"
               src="../images/icon-github.svg"
+            />
+          </NavLinkText>
+        </NavLinkItem>
+        <NavLinkItem>
+          <NavLinkText href="www.linkedin.com/in/michael-beamer">
+            <StaticImage
+              alt="linkedin logo"
+              src="../images/icon-linkedin.svg"
+            />
+          </NavLinkText>
+        </NavLinkItem>
+        <NavLinkItem>
+          <NavLinkText href="www.linkedin.com/in/michael-beamer">
+            <StaticImage
+              alt="linkedin logo"
+              src="../images/icon-linkedin.svg"
             />
           </NavLinkText>
         </NavLinkItem>

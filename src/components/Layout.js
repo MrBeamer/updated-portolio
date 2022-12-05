@@ -30,8 +30,9 @@ h1, h2, h3, h4, h5, h6{margin:0; font-size:inherit; font-weight:inherit;}
 `;
 
 const StyledLayout = styled.div`
-  margin: 0 30px;
-  @media only screen and (max-width: 767px) {
+  margin-left: 30px;
+
+  @media only screen and (max-width: 640px) {
     margin: 0 16px;
   }
 `;

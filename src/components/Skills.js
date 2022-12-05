@@ -8,9 +8,10 @@ const SkillGrid = styled.div`
   row-gap: 58px;
   column-gap: 30px;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 640px) {
     justify-items: center;
     text-align: center;
+    margin: 40px 0;
   }
 `;
 
@@ -55,7 +56,7 @@ const Skills = () => {
         <SkillText>4 Years Experiences</SkillText>
       </SkillItem>
       <SkillItem>
-        <SkillHeadline>SAAS</SkillHeadline>
+        <SkillHeadline>SEO</SkillHeadline>
         <SkillText>4 Years Experiences</SkillText>
       </SkillItem>
     </SkillGrid>

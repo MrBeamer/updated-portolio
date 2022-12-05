@@ -5,6 +5,10 @@ const StyledMain = styled.main`
   max-width: 1100px;
   margin: 0 auto;
   border-top: 1px solid #ffffff;
+
+  @media only screen and (max-width: 640px) {
+    border-bottom: 1px solid #ffffff;
+  }
 `;
 
 const Main = ({ children }) => {
