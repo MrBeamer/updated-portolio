@@ -10,16 +10,31 @@ const Logo = styled.p`
 `;
 
 const Nav = styled.nav`
-  max-width: 1110px;
-  margin: 39px auto 0 auto;
+  ${
+    "" /* max-width: 1110px;
+  margin: 39px auto 0 auto; */
+  }
   display: flex;
   justify-content: space-between;
+  margin: 29px 0 127px 0;
+
+  grid-column: 1/3;
+  grid-row: 1;
+  z-index: 1;
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    row-gap: 30px;
+  }
 `;
 
 const NavLinks = styled.ul`
   display: flex;
   column-gap: 32px;
   align-items: center;
+  margin-right: 29px;
 `;
 
 const NavLinkItem = styled.li``;

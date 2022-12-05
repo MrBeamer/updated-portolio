@@ -1,14 +1,19 @@
 import * as React from "react";
-import Navigation from "../components/Navigation";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
+import Navigation from "../components/Navigation";
+import Skills from "../components/Skills";
+import Main from "../components/Main";
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Navigation />
-      <Header />
-      <main></main>
+      <Header>
+        <Navigation />
+      </Header>
+      <Main>
+        <Skills />
+      </Main>
     </Layout>
   );
 };

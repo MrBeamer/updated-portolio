@@ -7,13 +7,18 @@ import patterRings from "../images/pattern-rings.svg";
 import patterCircle from "../images/pattern-circle.svg";
 
 const HeroHeader = styled.header`
-  display: flex;
+  display: grid;
+  flex-direction: column;
   max-width: 1110px;
-  margin: 127px auto 104px auto;
+  margin: 0 auto 104px auto;
   position: relative;
 `;
 
-const HeroContent = styled.div``;
+const HeroContent = styled.div`
+  grid-column: 1/3;
+  grid-row: 2;
+  z-index: 1;
+`;
 
 const HeroHeadline = styled.h1`
   font-weight: 700;
@@ -44,10 +49,12 @@ const HeroText = styled.p`
   line-height: 28px;
   color: #d9d9d9;
   max-width: 445px;
+  margin-bottom: 66px;
 `;
 
 const HeroLink = styled(AnchorLink)`
   position: relative;
+  text-transform: uppercase;
 
   &::before {
     content: "";
@@ -62,22 +69,35 @@ const HeroLink = styled(AnchorLink)`
 
 const HeroImage = styled.img`
   height: 700px;
-  position: static;
+  max-width: 445px;
+
+  grid-row: 1/4;
+  grid-column: 2;
+  justify-self: flex-end;
 `;
 
 const PatternRings = styled.img`
   height: 129px;
   max-width: 530px;
-  position: absolute;
+  ${
+    "" /* position: absolute;
   top: -9%;
-  left: -24%;
+  left: -24%; */
+  }
+
+  grid-column: 1;
+  grid-row: 1;
+  align-self: flex-end;
+  margin-left: -266px;
+  margin-bottom: -64px;
 `;
 
 const PatternCircle = styled.img``;
 
-const Header = () => {
+const Header = ({ children }) => {
   return (
     <HeroHeader>
+      {children}
       <HeroContent>
         <HeroHeadline>
           Nice to meet you! I’m <Highlight>Michael Beamer</Highlight>.
